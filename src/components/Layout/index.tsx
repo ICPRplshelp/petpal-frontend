@@ -7,8 +7,8 @@ import {amILoggedInBoolean} from "../../shared/utilities";
 
 
 function HeaderContent() {
-    const navigate = useNavigate();
-    const {loginInfo, setLoginInfo} = useContext(LoginInfoContext);
+    useNavigate();
+    const {loginInfo} = useContext(LoginInfoContext);
     const [loggedIn, setLoggedIn] = useState(false);
     useEffect(() => {
         amILoggedInBoolean(loginInfo).then((r) => {
@@ -47,7 +47,7 @@ function HeaderContent() {
                         <Col sm={2} md={2} className="d-flex align-self-center">
                             <Link to="accounts/me" className="navlink"><h4> Profile </h4></Link>
                         </Col>
-                        
+
                         <Col sm={2} md={2} className="d-flex align-self-center">
                             <Link to="notifications/" className="navlink"><h4> Notifs </h4></Link>
                         </Col>
@@ -55,8 +55,8 @@ function HeaderContent() {
                         <Col sm={2} md={2} className="d-flex align-self-center">
                             <Link to="logout" className="navlink"><h4> Logout </h4></Link>
                         </Col>
-                        </> : <></>}
-                    <Row >
+                    </> : <></>}
+                    <Row>
                     </Row>
                     {/* logo */}
                     <Col sm={1} md={1} className="d-flex align-self-center">

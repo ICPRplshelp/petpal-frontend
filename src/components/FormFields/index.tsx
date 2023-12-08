@@ -15,15 +15,6 @@ function snakeCaseToTitleCase(text: string): string {
 }
 
 
-function keysOf<T>(obj: T): (keyof T)[] {
-    let acc: (keyof T)[] = [];
-    for (const key in obj) {
-        acc.push(key);
-    }
-    return acc;
-}
-
-
 type FFProps<T> = {
     mandatory?: (keyof T)[];
     optional?: (keyof T)[];

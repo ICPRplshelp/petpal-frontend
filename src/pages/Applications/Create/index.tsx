@@ -63,10 +63,15 @@ function ApplicationCreate() {
         if (isNaN(pn)) {
             return;
         }
-        setObj({
-            ...obj,
-            pet: pn
-        });
+        // setObj({
+        //     ...obj,
+        //     pet: pn
+        // });
+        setObj(o => {
+            return {
+                ...o, pet: pn
+            }
+        })
         const endpoint = "pets";
         const url = `${getBE()}/${endpoint}/${pn}/`;
 
@@ -92,15 +97,17 @@ function ApplicationCreate() {
         submitAbstraction<AS>(
             url, obj, loginInfo, setObj, setErr, getAS2,
             getASErr
-        );
+        ).then(() => {
+        });
     }
     const b = getB<AS>(obj, setObj);
     return (
         <>
-            <Container id="container" className="justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
+            <Container id="container"
+                       className="justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
                 <Row className="p-3">
                     <h1 className="d-flex justify-content-center">New Pet Application</h1>
-                </Row >
+                </Row>
                 {pet !== undefined ? <>
                     <Row className="field">
                         <PetComponent3 item={pet}></PetComponent3>

@@ -38,8 +38,8 @@ function getEmptySearchSettingsERR(): AsString<ApplicationSearchSettings> {
 function ApplicationsList() {
     let [searchParams, setSearchParams] = useSearchParams();
     const [obj, setObj] = useState<ApplicationSearchSettings>(getEmptySearchSettings());
-    const [err, _] = useState<AsString<ApplicationSearchSettings>>(getEmptySearchSettingsERR());
-    const navigate = useNavigate();
+    const [err] = useState<AsString<ApplicationSearchSettings>>(getEmptySearchSettingsERR());
+    useNavigate();
     // const endpoint = "applications";
     // const url = `${getBE()}/${endpoint}/`;
     // const navigate = useNavigate();

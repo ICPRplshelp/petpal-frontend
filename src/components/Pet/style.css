@@ -24,6 +24,7 @@ main {
     font-size: 28px;
     font-weight: bold;
 }
+
 #container2 {
     margin: auto;
     display: flex;
@@ -47,6 +48,7 @@ main {
     background-color: green;
     color: white;
 }
+
 #btn_apply:hover {
     background-color: greenyellow;
     color: black;
@@ -61,11 +63,13 @@ main {
     background-color: bisque;
     color: black;
 }
+
 #btn3 {
     background-color: black;
     color: white;
     height: 55px;
 }
+
 #btn3:hover {
     background-color: bisque;
     color: black;

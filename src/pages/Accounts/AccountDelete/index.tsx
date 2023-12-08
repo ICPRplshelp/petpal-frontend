@@ -12,7 +12,7 @@ function AccountDelete() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        redirLoginIfLoggedOut(navigate, loginInfo).then(r => {
+        redirLoginIfLoggedOut(navigate, loginInfo).then(() => {
         });
     });
     const handleDelete = () => {
@@ -23,7 +23,7 @@ function AccountDelete() {
                     Authorization: `Bearer ${loginInfo.token}`
                 }
             }
-        ).then(r => {
+        ).then(() => {
             swalFire("Success!", "Account deleted", navigate, "/");
             // navigate("/")
         });
@@ -31,13 +31,16 @@ function AccountDelete() {
 
     return (
         <>
-            <div id="container" className="justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
+            <div id="container"
+                 className="justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
                 <h1>Delete account</h1>
                 <p>You sure about that?</p>
                 <Button variant="danger" onClick={handleDelete}>
                     Delete
                 </Button>
-                <Button onClick={() => {navigate("/accounts/me");}}>
+                <Button onClick={() => {
+                    navigate("/accounts/me");
+                }}>
                     Cancel
                 </Button>
             </div>

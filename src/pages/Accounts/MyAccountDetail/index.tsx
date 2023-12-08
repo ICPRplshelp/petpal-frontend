@@ -4,7 +4,7 @@ import {getAccountFromID} from "../../../shared/utilities";
 import {useNavigate} from "react-router-dom";
 import {LoginInfoContext} from "../../../contexts/LoginInfoContext";
 import AccountDisplay from "../../../components/AccountDisplay";
-import {Button, Container, Form, Row} from "react-bootstrap";
+import {Button} from "react-bootstrap";
 import "./style.css"
 
 function MyAccountDetail() {
@@ -20,7 +20,7 @@ function MyAccountDetail() {
             const account = await getAccountFromID(navigate, loginInfo.currentUser.id, loginInfo.token);
             setUser(account);
         }
-        fn().then(r => {
+        fn().then(() => {
         });
     }, [loginInfo.currentUser, loginInfo.token, navigate]);
 
@@ -28,8 +28,12 @@ function MyAccountDetail() {
     return (<div>
         <div id="title">Account Info</div>
         <div id="title">
-            <Button id="btn2" className="btn btn-dark m-1" onClick={() => { navigate("/accounts/update");}}>Update Account Info</Button>
-            <Button variant="danger" className="btn m-1" onClick={() => { navigate("/accounts/delete");}}>Delete Account</Button>
+            <Button id="btn2" className="btn btn-dark m-1" onClick={() => {
+                navigate("/accounts/update");
+            }}>Update Account Info</Button>
+            <Button variant="danger" className="btn m-1" onClick={() => {
+                navigate("/accounts/delete");
+            }}>Delete Account</Button>
         </div>
         {user !== undefined ? <>
             <AccountDisplay item={user} single={true} route={"accounts/me"}/>

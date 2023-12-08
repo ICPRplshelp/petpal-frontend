@@ -24,6 +24,7 @@ main {
     font-size: 28px;
     font-weight: bold;
 }
+
 #container {
     display: flex;
     flex-direction: column;
@@ -41,10 +42,12 @@ main {
     background-color: bisque;
     color: black;
 }
+
 #btn_apply {
     background-color: green;
     color: white;
 }
+
 #btn_apply:hover {
     background-color: greenyellow;
     color: black;

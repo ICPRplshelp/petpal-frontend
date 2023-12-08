@@ -18,9 +18,9 @@ function AccountDisplay(props: PassedInProps<PetPalUser>) {
             {/* {JSON.stringify(user)} */}
             <div id="container"
                  className="field justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
-                { user.avatar ? <>
+                {user.avatar ? <>
                     <div className={"circle-container"}><Image src={user.avatar} alt="Your Image Alt Text" fluid/></div>
-                </> : <></> }
+                </> : <></>}
 
                 <TextField
                     disabled

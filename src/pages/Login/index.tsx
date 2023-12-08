@@ -16,7 +16,7 @@ type Session = {
 
 
 function Login() {
-    const {loginInfo, setLoginInfo} = useContext(LoginInfoContext);
+    const {setLoginInfo} = useContext(LoginInfoContext);
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const navigate = useNavigate();
@@ -65,7 +65,7 @@ function Login() {
             });
             // TODO: handle more things on login success, such as redirection
             swalFire("Logged in", "Login Successful", navigate, "/accounts/me");
-        }, (r) => {
+        }, () => {
             console.log("I couldn't log in;")
             setErrMsg("Invalid username or password.");
             // TODO: handle login failure

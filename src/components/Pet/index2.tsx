@@ -15,7 +15,6 @@ function PetComponentInDetail(props: PassedInProps<Pet>) {
     const iOwnThisPet = loginInfo.currentUser?.id === temp.shelter_user_id;
 
 
-
     return (<div>
         {/* {JSON.stringify(temp)} */}
         <div id="container2"
@@ -141,11 +140,11 @@ function PetComponentInDetail(props: PassedInProps<Pet>) {
                 {/* <Button id="btn2" className="btn btn-dark m-1" onClick={() => { navigate("/pets/detail/" + temp.id);}}>Details</Button> */}
 
                 {isShelter ? <>
-                    { iOwnThisPet ? <>
+                    {iOwnThisPet ? <>
                         <Button id="btn2" className="btn btn-dark m-1" onClick={() => {
                             navigate("/pets/update/" + temp.id);
                         }}>Update</Button>
-                    </> : <></> }
+                    </> : <></>}
 
                 </> : <Button id="btn_apply" className="btn m-1" onClick={() => {
                     navigate("/applications/create/" + temp.id);

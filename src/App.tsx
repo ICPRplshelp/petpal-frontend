@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import Layout from "./components/Layout";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
@@ -57,7 +57,7 @@ function App() {
     return (
         <LoginInfoContext.Provider value={{loginInfo: sessionToken, setLoginInfo: setLoginInfoAndSave}}><HashRouter>
             <Routes>
-                <Route  element={<Layout/>}>
+                <Route element={<Layout/>}>
                     <Route path={"*"} element={<NotFound/>}></Route>
                     <Route path={"/"} index element={<Landing/>}></Route>
                     <Route path={"login"} element={<Login/>}></Route>

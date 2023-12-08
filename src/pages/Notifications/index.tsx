@@ -5,7 +5,7 @@ import {NotificationPetPal} from "../../shared/notification-interfaces";
 import PaginatedList from "../../components/PaginatedList";
 import "./style.css"
 import FormFields from "../../components/FormFields";
-import {useNavigate, useSearchParams} from "react-router-dom";
+import {useSearchParams} from "react-router-dom";
 import {AsString, DropDownOption} from "../../shared/universal-interfaces";
 import {getB} from "../../shared/utilities";
 
@@ -33,8 +33,7 @@ function Notifications() {
     // TODO: Sort, Filter. See Pet listing implementation for how to do them
     let [searchParams, setSearchParams] = useSearchParams();
     const [obj, setObj] = useState<NSS>(newNSS());
-    const [err, _f] = useState<AsString<NSS>>(newNSSE());
-    const navigate = useNavigate();
+    const [err] = useState<AsString<NSS>>(newNSSE());
     const optional: (keyof NSS)[] = [
         "sort",
         "filter"

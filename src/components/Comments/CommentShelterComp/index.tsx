@@ -62,7 +62,7 @@ function CommentCreateShelterComponent({id}: CCACProps) {
         submitAbstraction<CS>(
             url, obj, loginInfo, setObj, setErr, getCS2,
             getDefaultErr
-        );
+        ).then(() => {});
     }
     const b = getB<CS>(obj, setObj);
     return (

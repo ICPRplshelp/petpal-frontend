@@ -29,7 +29,8 @@ function ApplicationDetail() {
 
     return (
         <>
-            <div id="container" className="justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
+            <div id="container"
+                 className="justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
                 {app !== undefined && id !== undefined ? <>
                     <ApplicationComponentInDetail item={app}
                                                   single={true}

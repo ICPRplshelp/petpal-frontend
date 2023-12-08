@@ -7,13 +7,9 @@ export interface CommentSharedFields {
     created: Date;
 }
 
-export interface CommentApplication extends CommentSharedFields {
-    application: number;
-}
-
-export interface CommentShelter extends CommentSharedFields {
-    shelter: number;
-}
+// export interface CommentApplication extends CommentSharedFields {
+//     application: number;
+// }
 
 export interface CommentT extends CommentSharedFields {
     id: number;

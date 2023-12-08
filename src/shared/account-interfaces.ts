@@ -15,8 +15,8 @@ export interface PetPalUser {
     description: string; // all accounts have descriptions, but it only really matters for shelters.
 }
 
-export interface Shelter {
-    id: number;
-    description: string;
-    user: number;
-}
+// export interface Shelter {
+//     id: number;
+//     description: string;
+//     user: number;
+// }

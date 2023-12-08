@@ -93,7 +93,7 @@ function AccountUpdate() {
                 description: me.description
             });
         }
-        runIt().then(r => {
+        runIt().then(() => {
         });
     }, [loginInfo.currentUser, loginInfo.token, navigate]);
 
@@ -168,15 +168,6 @@ function AccountUpdate() {
 
     }
 
-
-    function changed(isSeeker: boolean) {
-        return (e: any) => {
-            // console.log("Changed");
-            setFormData({
-                ...formData,
-            });
-        };
-    }
 
     return (
         <Container id="container"

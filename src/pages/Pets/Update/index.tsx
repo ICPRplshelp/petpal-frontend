@@ -140,7 +140,7 @@ function UpdatePet() {
             setObj(newPet());
             setErr(newPetErr());
         }).then(
-            (r) => {
+            () => {
                 swalFire("Updated", "Pet successfully updated", navigate, "/pets/search");
             }
         ).catch((e: AxiosError) => {

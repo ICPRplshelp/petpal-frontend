@@ -116,16 +116,16 @@ export async function amILoggedInBoolean(loginInfo: LoginInfo) {
 }
 
 
-/**
- * Redirects me to the home page if I'm not a shelter (either I'm logged in as a seeker, or I'm logged out)
- * @param navigate the navigate function
- * @param loginInfo useContext should give you this: {loginInfo} = useContext(LoginInfoContext)
- */
-export function navigateHomeNotShelter(navigate: NavigateFunction, loginInfo: LoginInfo) {
-    if (!(loginInfo.currentUser?.type === "SHELTER")) {
-        navigate("/");
-    }
-}
+// /**
+//  * Redirects me to the home page if I'm not a shelter (either I'm logged in as a seeker, or I'm logged out)
+//  * @param navigate the navigate function
+//  * @param loginInfo useContext should give you this: {loginInfo} = useContext(LoginInfoContext)
+//  */
+// export function navigateHomeNotShelter(navigate: NavigateFunction, loginInfo: LoginInfo) {
+//     if (!(loginInfo.currentUser?.type === "SHELTER")) {
+//         navigate("/");
+//     }
+// }
 
 
 export function clamp(v: number, b: number, e: number) {
@@ -226,11 +226,11 @@ export function swalFire(title: string, text: string, nav?: NavigateFunction, to
         confirmButtonText: 'OK',
         confirmButtonColor: '#3f9ef3',
         timer: 3500
-    }).then(r => {
+    }).then(() => {
         if (nav !== undefined) {
             console.log("Navigating to", to);
             nav(to);
-        }else {
+        } else {
             console.log("Nav is undefined and I can't redir");
         }
     });

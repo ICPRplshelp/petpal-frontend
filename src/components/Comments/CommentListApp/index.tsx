@@ -17,7 +17,8 @@ function CommentListApplication({id, route}: { id: number, route: string }) {
 
     return (
         <>
-            <div id="container4" className="field justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
+            <div id="container4"
+                 className="field justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
                 <h2>Comments</h2>
                 {
                     // eslint-disable-next-line eqeqeq

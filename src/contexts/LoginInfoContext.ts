@@ -11,6 +11,6 @@ export type LoginInfoContextType = {
 
 export const LoginInfoContext = createContext<LoginInfoContextType>({
     loginInfo: emptyTokenConstructor(),
-    setLoginInfo: (token) => {
+    setLoginInfo: () => {
     }
 });

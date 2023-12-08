@@ -102,13 +102,14 @@ function NewPetListing() {
 
     const handleSubmit = (e: FormEvent<never>) => {
         e.preventDefault();
-        submitAbstraction<Pet>(url, obj, loginInfo, setObj, setErr, newPet, newPetErr);
+        submitAbstraction<Pet>(url, obj, loginInfo, setObj, setErr, newPet, newPetErr).then(() => {});
     }
 
 
     return (
         <>
-            <Container id='container' className="justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
+            <Container id='container'
+                       className="justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
                 <Row className="p-3">
                     <h1 className="d-flex justify-content-center">New Pet Listing</h1>
                 </Row>

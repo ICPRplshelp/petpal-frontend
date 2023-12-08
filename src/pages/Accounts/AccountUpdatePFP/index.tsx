@@ -35,7 +35,7 @@ function AccountUpdatePFP() {
                 Authorization: `Bearer ${loginInfo.token}`,
                 "Content-Type": "multipart/form-data"
             }
-        }).then(r => {
+        }).then(() => {
             console.log("Pfp updated");
             swalFire("Success", "Profile Picture successfully update!", navigate, "/accounts/me");
 

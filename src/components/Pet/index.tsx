@@ -69,11 +69,11 @@ function PetComponent(props: PassedInProps<Pet>) {
                 <Button id="btn2" className="btn btn-dark m-1" onClick={() => {
                     navigate("/pets/detail/" + temp.id);
                 }}>Details</Button>
-                { !isShelter ? <>
-                    <Button id="btn_apply" className="btn m-1" onClick={() => {
-                        navigate("/applications/create/" + temp.id);
-                    }}>Apply</Button>
-                </> :
+                {!isShelter ? <>
+                        <Button id="btn_apply" className="btn m-1" onClick={() => {
+                            navigate("/applications/create/" + temp.id);
+                        }}>Apply</Button>
+                    </> :
 
                     // <Button id="btn2" className="btn btn-dark m-1" onClick={() => { navigate("/pets/update/" + temp.id);}}>Update</Button>
 

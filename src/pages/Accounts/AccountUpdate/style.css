@@ -24,6 +24,7 @@ main {
     font-size: 28px;
     font-weight: bold;
 }
+
 #container {
     margin: auto;
     display: flex;

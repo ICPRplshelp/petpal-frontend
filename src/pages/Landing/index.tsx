@@ -21,9 +21,10 @@ function Landing() {
                     </div>
 
                     <div className="row pt-3 pb-4" id="seeker_button">
-                        <a className="btn btn-dark align-self-center" onClick={() => {
+                        <div
+                            className="btn btn-dark align-self-center" onClick={() => {
                             navigate("register")
-                        }} role="button"><h4> Start Your Journey </h4></a>
+                        }} role="button"><h4> Start Your Journey </h4></div>
                     </div>
                 </div>
             </div>
@@ -36,8 +37,10 @@ function Landing() {
                     </div>
 
                     <div className="row pt-3 pb-4" id="seeker_button">
-                        <a className="btn btn-dark align-self-center" onClick={()=>{navigate("register")}} role="button"><h5> Click
-                            Here </h5></a>
+                        <div className="btn btn-dark align-self-center" onClick={() => {
+                            navigate("register")
+                        }} role="button"><h5> Click
+                            Here </h5></div>
                     </div>
                 </div>
 

@@ -18,7 +18,7 @@ function ApplicationComponentInDetail(props: PassedInProps<Application>) {
 
     const applicationTemp = props.item;
     const [application, setApplication] = useState(applicationTemp);
-    const navigate = useNavigate();
+    useNavigate();
     const {loginInfo} = useContext(LoginInfoContext);
     const updateAppStatus = (newState: AppStates) => {
         axios.patch(`${getBE()}/applications/${application.id}/`, {
@@ -29,7 +29,7 @@ function ApplicationComponentInDetail(props: PassedInProps<Application>) {
                     Authorization: `Bearer ${loginInfo.token}`
                 }
             }
-        ).then(r => {
+        ).then(() => {
             swalFire("Update successful", "Application updated");
             setApplication({
                 ...application,

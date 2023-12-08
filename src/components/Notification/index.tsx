@@ -13,7 +13,7 @@ function Notification(props: PassedInProps<NotificationPetPal>) {
 
     const notif = props.item;
 
-    const [read, setRead] = useState(notif.read ?? false);
+    const [read] = useState(notif.read ?? false);
     const notification = notif ?? {
         link: "/",
         author: 1,
@@ -64,7 +64,7 @@ function Notification(props: PassedInProps<NotificationPetPal>) {
             }
         ).then(() => {
             setDeleted(true);
-        }).catch(e => {
+        }).catch(() => {
             // I give up I'm doing nothing here
         });
     }

@@ -2,7 +2,7 @@ import {PassedInProps} from "../../shared/universal-interfaces";
 import {Application} from "../../shared/application-interfaces";
 import CommentCreateAppComponent from "../Comments/CommentApplicationComp";
 import CommentListApp from "../Comments/CommentListApp";
-import { Button } from "react-bootstrap";
+import {Button} from "react-bootstrap";
 import TextField from "../TextField";
 import {useNavigate} from "react-router-dom";
 import "./style.css"
@@ -14,7 +14,8 @@ function ApplicationComponentDetailless(props: PassedInProps<Application>) {
         <>
             {/* {JSON.stringify(props.item)}
              */}
-            <div id="container2" className="field justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
+            <div id="container2"
+                 className="field justify-content-center mt-5 mb-5 ml-2 mr-2 p-2 border border-dark rounded border-2">
                 <TextField
                     disabled
                     aria-readonly
@@ -48,7 +49,9 @@ function ApplicationComponentDetailless(props: PassedInProps<Application>) {
                     value={application.application_status}
                 />
                 <div id="title">
-                    <Button id="btn2" className="btn btn-dark m-1" onClick={() => { navigate("/applications/detail/" + application.id);}}>Details</Button>
+                    <Button id="btn2" className="btn btn-dark m-1" onClick={() => {
+                        navigate("/applications/detail/" + application.id);
+                    }}>Details</Button>
                 </div>
             </div>
             {props.single && props.route ? <>
