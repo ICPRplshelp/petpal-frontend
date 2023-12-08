@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import {HashRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
 import Layout from "./components/Layout";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
@@ -55,7 +55,7 @@ function App() {
     }
 
     return (
-        <LoginInfoContext.Provider value={{loginInfo: sessionToken, setLoginInfo: setLoginInfoAndSave}}><HashRouter>
+        <LoginInfoContext.Provider value={{loginInfo: sessionToken, setLoginInfo: setLoginInfoAndSave}}><BrowserRouter >
             <Routes>
                 <Route element={<Layout/>}>
                     <Route path={"*"} element={<NotFound/>}></Route>
@@ -92,7 +92,7 @@ function App() {
                            element={<AboutPage/>}></Route>
                 </Route>
             </Routes>
-        </HashRouter></LoginInfoContext.Provider>
+        </BrowserRouter></LoginInfoContext.Provider>
     );
 }
 
