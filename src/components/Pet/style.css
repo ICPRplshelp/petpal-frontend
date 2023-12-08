@@ -1,0 +1,72 @@
+#logo {
+    width: 100%;
+}
+
+.navlink {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    color: white;
+    background-color: rgba(77, 2, 2, 0.8);
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0px;
+    background-size: cover;
+}
+
+#title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+#container2 {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+.field {
+    width: 95%;
+}
+
+#btn:hover {
+    background-color: bisque;
+    color: black;
+}
+
+#btn_apply {
+    background-color: green;
+    color: white;
+}
+#btn_apply:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+#btn1:hover {
+    background-color: bisque;
+    color: black;
+}
+
+#btn2:hover {
+    background-color: bisque;
+    color: black;
+}
+#btn3 {
+    background-color: black;
+    color: white;
+    height: 55px;
+}
+#btn3:hover {
+    background-color: bisque;
+    color: black;
+}
