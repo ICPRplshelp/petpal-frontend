@@ -1,4 +1,4 @@
-import React, {FormEvent, useState} from "react";
+import React, {FormEvent, useContext, useState} from "react";
 import PaginatedList from "../../../components/PaginatedList";
 import {Button, Container, Form, Row} from "react-bootstrap";
 import PetComponent from "../../../components/Pet/index";
@@ -6,6 +6,7 @@ import {Pet} from "../../../shared/pet-interfaces";
 import {bind} from "../../../shared/utilities";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import "./style.css"
+import { LoginInfoContext } from "../../../contexts/LoginInfoContext";
 
 function removeEmptyOrFalseFromObj(params: Object) {
     for (let key in params) {
@@ -24,7 +25,7 @@ function PetSearch() {
     const toggleFS = () => {
         setShowFS(!showFS);
     }
-
+    const {loginInfo} = useContext(LoginInfoContext);
     let [searchParams, setSearchParams] = useSearchParams();
 
     const [sortState, setSortState] = useState('');
@@ -169,7 +170,8 @@ function PetSearch() {
             <div>
                 <div id="title">Listing</div>
                 <div id="title">
-                    <Button id="btn_apply" className="btn btn-dark m-1" onClick={() => {
+                    <Button disabled={loginInfo.currentUser?.type === "SEEKER" ?? true}
+                    id="btn_apply" className="btn btn-dark m-1" onClick={() => {
                         navigate("/pets/new/");
                     }}>Add Pet</Button>
                 </div>
