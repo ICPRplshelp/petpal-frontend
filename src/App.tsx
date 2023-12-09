@@ -26,7 +26,7 @@ import AboutPage from "./pages/About";
 import AccountUpdatePFP from "./pages/Accounts/AccountUpdatePFP";
 import NotFound from "./pages/NotFound";
 
-const BROWSER_STORAGE = sessionStorage; // localStorage;
+const BROWSER_STORAGE = localStorage; //sessionStorage; // localStorage;
 const PETPAL_STORAGE_KEY = "petpallogin_31010130303945039642"
 
 function retrieveLoginInfo(): LoginInfo {
