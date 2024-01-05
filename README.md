@@ -1,48 +1,16 @@
-# Getting Started with Create React App
+# CSC309 Petpal
 
-Hello!
+This is the frontend of the course project I've made for CSC309.
+I'm open sourcing this as I've written some components
+that are very reusable, if you ever want to use that
+in a project that are very DRY compliant. For example:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Paginator and PaginatedList
+- FormFields
 
-## Available Scripts
+**The deployment is broken - the backend is not active.** I
+don't plan on open-sourcing the backend.
 
-In the project directory, you can run:
+Also, the instructor of the offering of this course (CSC309) has given the entire class permission to open source their project.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Note that this is a group project with 3 other team members, but for privacy reasons unless they request me, I'll keep them anonmyous.
