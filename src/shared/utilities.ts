@@ -31,7 +31,7 @@ export function emptyTokenConstructor(): LoginInfo {
  * No trailing slash in the URL.
  */
 export function getBE() {
-    return "https://petpal-backend-4335.onrender.com";
+    return "https://localhost:8000";
 }
 
 /**
